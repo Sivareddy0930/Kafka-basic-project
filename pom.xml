@@ -6,14 +6,13 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.3</version>
-		<relativePath/>
-		<!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.sivaguides</groupId>
+	<groupId>com.kafka</groupId>
 	<artifactId>springboot-kafka-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>kafka_wikimedia_project</name>
-	<description>Demo project for Spring Boot  kafka</description>
+	<name>springboot-kafka-project</name>
+	<description>Demo project for Spring Boot-kafka-project</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -22,9 +21,9 @@
 		<developer/>
 	</developers>
 	<modules>
-		<module>wikimedia_consumer</module>
-		<module>wikimedia_producer</module>
+		<module>kafka-producer-wikimedia</module>
 	</modules>
+
 	<scm>
 		<connection/>
 		<developerConnection/>
@@ -38,32 +37,18 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--			<artifactId>spring-boot-starter-web</artifactId>-->
 <!--		</dependency>-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>com.mysql</groupId>-->
-<!--			<artifactId>mysql-connector-j</artifactId>-->
-<!--			<scope>runtime</scope>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -87,7 +72,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>

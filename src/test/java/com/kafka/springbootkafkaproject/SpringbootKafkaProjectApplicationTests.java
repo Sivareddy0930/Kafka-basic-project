@@ -1,10 +1,10 @@
-package com.sivaguides;
+package com.kafka.springbootkafkaproject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KafkaWikimediaProjectApplicationTests {
+class SpringbootKafkaProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
